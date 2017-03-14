@@ -18,10 +18,6 @@ import collections
 import argparse
 
 def main():
-    #gtf_filename = "/home/matthew/lab_root/sorghum/test_root/data/GTF/Sorghum_bicolor.Sorbi1.34.gtf"
-
-    #alignment_filename = "/home/matthew/lab_root/sorghum/test_root/data/aligned_reads/20170209_1838_B!_light_20170209_1730_quality_filtered_minq20_minp80_R2Aligned.sortedByCoord.out.bam"
-
     parser = argparse.ArgumentParser()
     parser._action_groups.pop()
     required = parser.add_argument_group('required argumnets')
@@ -29,8 +25,6 @@ def main():
     required.add_argument("-g","--gtf",help="GTF file",required=True)
     optional.add_argument("-i","--input",help="Input BAM file(Default standard input)")
     optional.add_argument("-o","--output",help="Output file(Default standard out)")
-
-
 
     args = parser.parse_args()
 
